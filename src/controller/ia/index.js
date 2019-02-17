@@ -14,7 +14,7 @@ const exec = (comando) => {
                 input: item.text,
                 output: item.category
             }));
-            network.train(trainingData, { iterations: 500, log: true  });
+            network.train(trainingData, { iterations: 1200, log: true  });
             fs.writeFile(path,  JSON.stringify(network.toJSON()), function(err) {
             if(err) return console.log(err);
                 console.log("training save!")
