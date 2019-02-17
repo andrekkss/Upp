@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client(); 
 const config = require("./config/config.json"); 
+const comandos = require("./config/comandos.js");
 
 client.login(config.token);
 
@@ -39,8 +40,7 @@ client.on("message", async message => {
   
   // coamdno ping
   if(comando === "ping") {
-    const m = await message.channel.send("Ping?");
-    m.edit(`Pong! A Latência é ${m.createdTimestamp - message.createdTimestamp}ms. A Latencia da API é ${Math.round(client.ping)}ms`);
+    comandos.ping();
   }
   //comando falar
   if(comando === "say") { 
@@ -49,7 +49,7 @@ client.on("message", async message => {
     message.channel.send(sayMessage);
   }
 //comando apagar
-  if(comando === "apagar") {
+  if(comando === "apaga") {
     const deleteCount = parseInt(args[0], 10);
     if(!deleteCount || deleteCount < 2 || deleteCount > 100)
       return message.reply("Por favor, forneça um número entre 2 e 100 para o número de mensagens a serem excluídas");
