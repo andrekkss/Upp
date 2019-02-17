@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/andrekkss/Upp#readme",
   "dependencies": {
+    "brain.js": "^1.2.6",
     "discord.js": "^11.4.2"
   }
 }
