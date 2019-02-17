@@ -1,6 +1,6 @@
 const Ia = require('../ia/index');
 
-async function command(message, comando){
+async function command(message, args, comando){
   switch(comando){
     case 'ping':
       const m = await message.channel.send("Ping?");
