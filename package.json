@@ -4,6 +4,7 @@
   "description": "bot para o discord",
   "main": "index.js",
   "directories": {
+    "start": "node ./src/index.js",
     "test": "test"
   },
   "scripts": {
